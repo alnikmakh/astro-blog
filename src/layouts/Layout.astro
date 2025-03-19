@@ -1,0 +1,94 @@
+---
+// Props for the Layout component
+interface Props {
+	title: string;
+	description?: string;
+}
+
+// Destructure props with defaults
+const { 
+	title, 
+	description = "A personal blog about technology, coding, and more" 
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+	</head>
+	<body class="min-h-screen bg-gray-50 flex flex-col">
+		<header class="bg-white shadow">
+			<div class="container mx-auto px-4 py-4 max-w-6xl">
+				<div class="flex justify-between items-center">
+					<div>
+						<a href="/" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors">
+							My Blog
+						</a>
+					</div>
+					
+					<nav>
+						<ul class="flex space-x-6">
+							<li>
+								<a href="/" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+							</li>
+							<li>
+								<a href="/about" class="text-gray-700 hover:text-blue-600 transition-colors">About</a>
+							</li>
+							<li>
+								<a href="/blog" class="text-gray-700 hover:text-blue-600 transition-colors">Blog</a>
+							</li>
+							<li>
+								<a href="/contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<main class="flex-grow">
+			<slot />
+		</main>
+
+		<footer class="bg-gray-800 text-white py-8">
+			<div class="container mx-auto px-4 max-w-6xl">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div>
+						<h3 class="text-xl font-semibold mb-4">My Blog</h3>
+						<p class="text-gray-300">
+							Sharing insights and stories about technology, development, and more.
+						</p>
+					</div>
+					
+					<div>
+						<h3 class="text-xl font-semibold mb-4">Links</h3>
+						<ul class="space-y-2">
+							<li><a href="/" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+							<li><a href="/about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+							<li><a href="/blog" class="text-gray-300 hover:text-white transition-colors">Blog</a></li>
+							<li><a href="/contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+						</ul>
+					</div>
+					
+					<div>
+						<h3 class="text-xl font-semibold mb-4">Connect</h3>
+						<ul class="space-y-2">
+							<li><a href="https://twitter.com/yourusername" class="text-gray-300 hover:text-white transition-colors">Twitter</a></li>
+							<li><a href="https://github.com/yourusername" class="text-gray-300 hover:text-white transition-colors">GitHub</a></li>
+							<li><a href="https://linkedin.com/in/yourprofile" class="text-gray-300 hover:text-white transition-colors">LinkedIn</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+					<p>&copy; {new Date().getFullYear()} My Blog. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html> 
