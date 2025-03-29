@@ -1,46 +1,47 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import "../styles/global.css";
+import layoutStyles from '../layouts/Layout.module.css'; // Import layout styles for container
+import styles from './about.module.css';
 
 const pageTitle = "About Me";
 ---
 
 <Layout title={pageTitle}>
-  <main class="container mx-auto px-4 py-8 max-w-3xl">
-    <h1 class="text-4xl font-bold mb-6">{pageTitle}</h1>
-    
-    <div class="mb-8">
-      <h2 class="text-2xl font-semibold mb-4">Hello, I'm Aleksandr!</h2>
-      <p class="text-lg mb-4">
-        I'm a Frontend Developer based in Novi Sad, Serbia. This blog is where I share my thoughts 
+  <main class:list={[layoutStyles.container, layoutStyles.maxWidth3xl, styles.aboutMain]}>
+    <h1 class={styles.pageTitle}>{pageTitle}</h1>
+
+    <div class={styles.contentSection}>
+      <h2 class={styles.sectionHeading}>Hello, I'm Aleksandr!</h2>
+      <p class={styles.paragraph}>
+        I'm a Frontend Developer based in Novi Sad, Serbia. This blog is where I share my thoughts
         about frontend development, along with occasional insights into my personal projects and interests.
       </p>
-      <p class="text-lg mb-4">
+      <p class={styles.paragraph}>
         When I'm not working, you can find me coding.
       </p>
     </div>
-    
-    <div class="mb-8">
-      <h2 class="text-2xl font-semibold mb-4">My Background</h2>
-      <p class="text-lg mb-4">
+
+    <div class={styles.contentSection}>
+      <h2 class={styles.sectionHeading}>My Background</h2>
+      <p class={styles.paragraph}>
         I have 5 years of experience in Frontend Development. I've worked with TypeScript, React, Resux, NestJS, Fastify, Prisma. My focus is primarily on React and NestJS with Fastify.
       </p>
     </div>
-    
-    <div class="mb-8">
-      <h2 class="text-2xl font-semibold mb-4">Why I Blog</h2>
-      <p class="text-lg mb-4">
+
+    <div class={styles.contentSection}>
+      <h2 class={styles.sectionHeading}>Why I Blog</h2>
+      <p class={styles.paragraph}>
         I started this blog to share challenges that I face during my coding sessions.
         My goal is to just share my experience.
       </p>
     </div>
-    
-    <div class="mb-8">
-      <h2 class="text-2xl font-semibold mb-4">Connect With Me</h2>
-      <ul class="list-disc list-inside">
-        <li class="mb-2">Email: <a href="mailto:regulardev.click@gmail.com" class="text-blue-600 hover:underline">regulardev.click@gmail.com</a></li>
-        <li class="mb-2">GitHub: <a href="https://github.com/alnikmakh" class="text-blue-600 hover:underline">@alnikmakh</a></li>
-        <li class="mb-2">LinkedIn: <a href="https://linkedin.com/in/alnikmakh" class="text-blue-600 hover:underline">Aleksandr Makhorin</a></li>
+
+    <div class={styles.contentSection}>
+      <h2 class={styles.sectionHeading}>Connect With Me</h2>
+      <ul class={styles.linkList}>
+        <li class={styles.listItem}>Email: <a href="mailto:regulardev.click@gmail.com" class={styles.link}>regulardev.click@gmail.com</a></li>
+        <li class={styles.listItem}>GitHub: <a href="https://github.com/alnikmakh" class={styles.link}>@alnikmakh</a></li>
+        <li class={styles.listItem}>LinkedIn: <a href="https://linkedin.com/in/alnikmakh" class={styles.link}>Aleksandr Makhorin</a></li>
       </ul>
     </div>
   </main>
