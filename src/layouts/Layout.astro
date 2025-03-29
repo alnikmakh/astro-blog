@@ -23,6 +23,24 @@ const {
 		<meta name="description" content={description} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
+
+		<!-- Shoelace Theme (choose light or dark) -->
+		<link rel="stylesheet" href="/node_modules/@shoelace-style/shoelace/dist/themes/light.css" />
+
+		<!-- Script to set the base path for Shoelace assets -->
+		<!-- Adjust path if your node_modules are served differently -->
+		<script type="module">
+			import { setBasePath } from '/node_modules/@shoelace-style/shoelace/dist/utilities/base-path.js';
+			setBasePath('/node_modules/@shoelace-style/shoelace/dist/');
+		</script>
+
+		<!-- Import Shoelace components needed globally or frequently (optional, but can improve performance) -->
+		<!-- Example: If you use buttons and icons everywhere -->
+		<!--
+		<script type="module" src="/node_modules/@shoelace-style/shoelace/dist/components/button/button.js"></script>
+		<script type="module" src="/node_modules/@shoelace-style/shoelace/dist/components/icon/icon.js"></script>
+		-->
+
 	</head>
 	<body> {/* Removed classes, handled by global.css */}
 		<header class={styles.header}>
@@ -30,6 +48,7 @@ const {
 				<div class={styles.headerInner}>
 					<div>
 						<a href="/" class={styles.brandLink}>
+							<sl-icon name="house-heart-fill" style="font-size: 1.5rem; vertical-align: middle; margin-right: 0.5rem;"></sl-icon>
 							My Blog
 						</a>
 					</div>
@@ -81,9 +100,9 @@ const {
 					<div>
 						<h3 class={styles.footerHeading}>Connect</h3>
 						<ul class={styles.footerLinkList}>
-							<li><a href="https://twitter.com/yourusername" class={styles.footerLink}>Twitter</a></li>
-							<li><a href="https://github.com/yourusername" class={styles.footerLink}>GitHub</a></li>
-							<li><a href="https://linkedin.com/in/yourprofile" class={styles.footerLink}>LinkedIn</a></li>
+							<li><sl-icon name="twitter" style="vertical-align: middle; margin-right: 0.25rem;"></sl-icon><a href="https://twitter.com/yourusername" class={styles.footerLink}>Twitter</a></li>
+							<li><sl-icon name="github" style="vertical-align: middle; margin-right: 0.25rem;"></sl-icon><a href="https://github.com/yourusername" class={styles.footerLink}>GitHub</a></li>
+							<li><sl-icon name="linkedin" style="vertical-align: middle; margin-right: 0.25rem;"></sl-icon><a href="https://linkedin.com/in/yourprofile" class={styles.footerLink}>LinkedIn</a></li>
 						</ul>
 					</div>
 				</div>
@@ -93,5 +112,9 @@ const {
 				</div>
 			</div>
 		</footer>
+
+		<!-- Import Shoelace base component definitions (lazy-loads components) -->
+		<!-- Place towards the end of body for better perceived performance -->
+		<script type="module" src="/node_modules/@shoelace-style/shoelace/dist/shoelace.js"></script>
 	</body>
 </html> 
