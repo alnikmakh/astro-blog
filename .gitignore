@@ -1,5 +1,7 @@
 # build output
 dist/
+# shoelace assets
+public/shoelace-assets
 # generated types
 .astro/
 

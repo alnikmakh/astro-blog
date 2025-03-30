@@ -1,0 +1,45 @@
+.aboutMain {
+  padding-top: 2rem; /* py-8 */
+  padding-bottom: 2rem; /* py-8 */
+}
+
+.pageTitle {
+  font-size: 2.25rem; /* text-4xl */
+  line-height: 2.5rem;
+  font-weight: 700; /* font-bold */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.contentSection {
+  margin-bottom: 2rem; /* mb-8 */
+}
+
+.sectionHeading {
+  font-size: 1.5rem; /* text-2xl */
+  line-height: 2rem;
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.paragraph {
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.linkList {
+  list-style: disc; /* list-disc */
+  list-style-position: inside; /* list-inside */
+}
+
+.listItem {
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.link {
+  color: #2563EB; /* text-blue-600 */
+}
+
+.link:hover {
+  text-decoration: underline; /* hover:underline */
+} 
