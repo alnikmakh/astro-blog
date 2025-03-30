@@ -10,6 +10,10 @@
   },
   "dependencies": {
     "@shoelace-style/shoelace": "^2.20.1",
-    "astro": "^5.5.3"
+    "astro": "^5.5.3",
+    "rollup-plugin-copy": "^3.5.0"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1"
   }
 }
