@@ -11,16 +11,18 @@
 }
 
 .maxWidth4xl {
-    max-width: 56rem; /* max-w-4xl */
+  max-width: 56rem; /* max-w-4xl */
 }
 
 .maxWidth3xl {
-    max-width: 48rem; /* max-w-3xl */
+  max-width: 48rem; /* max-w-3xl */
 }
 
 .header {
-  background-color: #FFFFFF; /* bg-white */
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); /* shadow */
+  background-color: #ffffff; /* bg-white */
+  box-shadow:
+    0 1px 3px 0 rgb(0 0 0 / 0.1),
+    0 1px 2px -1px rgb(0 0 0 / 0.1); /* shadow */
 }
 
 .headerContainer {
@@ -38,14 +40,14 @@
   font-size: 1.5rem; /* text-2xl */
   line-height: 2rem;
   font-weight: 700; /* font-bold */
-  color: #1F2937; /* text-gray-800 */
+  color: #1f2937; /* text-gray-800 */
   transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
 .brandLink:hover {
-  color: #2563EB; /* hover:text-blue-600 */
+  color: #2563eb; /* hover:text-blue-600 */
 }
 
 .navList {
@@ -65,7 +67,7 @@
 }
 
 .navLink:hover {
-  color: #2563EB; /* hover:text-blue-600 */
+  color: #2563eb; /* hover:text-blue-600 */
 }
 
 .mainContent {
@@ -73,8 +75,8 @@
 }
 
 .footer {
-  background-color: #1F2937; /* bg-gray-800 */
-  color: #FFFFFF; /* text-white */
+  background-color: #1f2937; /* bg-gray-800 */
+  color: #ffffff; /* text-white */
   padding-top: 2rem; /* py-8 */
   padding-bottom: 2rem; /* py-8 */
 }
@@ -85,7 +87,8 @@
   grid-template-columns: repeat(1, minmax(0, 1fr)); /* grid-cols-1 */
 }
 
-@media (min-width: 768px) { /* md: */
+@media (min-width: 768px) {
+  /* md: */
   .footerGrid {
     grid-template-columns: repeat(3, minmax(0, 1fr)); /* md:grid-cols-3 */
   }
@@ -99,7 +102,7 @@
 }
 
 .footerText {
-  color: #D1D5DB; /* text-gray-300 */
+  color: #d1d5db; /* text-gray-300 */
 }
 
 .footerLinkList {
@@ -111,14 +114,14 @@
 }
 
 .footerLink {
-  color: #D1D5DB; /* text-gray-300 */
+  color: #d1d5db; /* text-gray-300 */
   transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
 .footerLink:hover {
-  color: #FFFFFF; /* hover:text-white */
+  color: #ffffff; /* hover:text-white */
 }
 
 .footerCopyright {
@@ -126,5 +129,5 @@
   margin-top: 2rem; /* mt-8 */
   padding-top: 1.5rem; /* pt-6 */
   text-align: center; /* text-center */
-  color: #9CA3AF; /* text-gray-400 */
-} 
+  color: #9ca3af; /* text-gray-400 */
+}

@@ -1,5 +1,9 @@
 .heroSection {
-  background: linear-gradient(to bottom, #DBEAFE, #FFFFFF); /* bg-gradient-to-b from-blue-100 to-white */
+  background: linear-gradient(
+    to bottom,
+    #dbeafe,
+    #ffffff
+  ); /* bg-gradient-to-b from-blue-100 to-white */
   padding-top: 4rem; /* py-16 */
   padding-bottom: 4rem; /* py-16 */
 }
@@ -9,10 +13,11 @@
   line-height: 2.5rem;
   font-weight: 700; /* font-bold */
   margin-bottom: 1rem; /* mb-4 */
-  color: #1F2937; /* text-gray-800 */
+  color: #1f2937; /* text-gray-800 */
 }
 
-@media (min-width: 768px) { /* md: */
+@media (min-width: 768px) {
+  /* md: */
   .heroTitle {
     font-size: 3rem; /* md:text-5xl */
     line-height: 1;
@@ -22,7 +27,7 @@
 .heroSubtitle {
   font-size: 1.25rem; /* text-xl */
   line-height: 1.75rem;
-  color: #4B5563; /* text-gray-600 */
+  color: #4b5563; /* text-gray-600 */
   max-width: 42rem; /* max-w-2xl */
 }
 
@@ -36,8 +41,8 @@
   line-height: 2.25rem;
   font-weight: 700; /* font-bold */
   margin-bottom: 2rem; /* mb-8 */
-  color: #1F2937; /* text-gray-800 */
-  border-bottom: 1px solid #E5E7EB; /* border-b */
+  color: #1f2937; /* text-gray-800 */
+  border-bottom: 1px solid #e5e7eb; /* border-b */
   padding-bottom: 1rem; /* pb-4 */
 }
 
@@ -46,22 +51,26 @@
   gap: 2rem; /* gap-8 */
 }
 
-@media (min-width: 768px) { /* md: */
+@media (min-width: 768px) {
+  /* md: */
   .postsGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
   }
 }
 
-@media (min-width: 1024px) { /* lg: */
+@media (min-width: 1024px) {
+  /* lg: */
   .postsGrid {
     grid-template-columns: repeat(3, minmax(0, 1fr)); /* lg:grid-cols-3 */
   }
 }
 
 .postCard {
-  background-color: #FFFFFF; /* bg-white */
+  background-color: #ffffff; /* bg-white */
   border-radius: 0.5rem; /* rounded-lg */
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
   overflow: hidden; /* overflow-hidden */
   transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -69,7 +78,9 @@
 }
 
 .postCard:hover {
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* hover:shadow-lg */
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1); /* hover:shadow-lg */
 }
 
 .postCardContent {
@@ -84,15 +95,15 @@
 }
 
 .postLink {
-  color: #2563EB; /* text-blue-600 */
+  color: #2563eb; /* text-blue-600 */
 }
 
 .postLink:hover {
-  color: #1E40AF; /* hover:text-blue-800 */
+  color: #1e40af; /* hover:text-blue-800 */
 }
 
 .postCardExcerpt {
-  color: #4B5563; /* text-gray-600 */
+  color: #4b5563; /* text-gray-600 */
 }
 
 .postCardReadMoreWrapper {
@@ -101,10 +112,11 @@
 
 .postCardReadMoreLink {
   display: inline-block; /* inline-block */
-  color: #2563EB; /* text-blue-600 */
+  color: #2563eb; /* text-blue-600 */
   font-weight: 500; /* font-medium */
 }
 
 .postCardReadMoreLink:hover {
-  color: #1E40AF; /* hover:text-blue-800 */
-} 
+  color: #1e40af; /* hover:text-blue-800 */
+}
+

@@ -1,68 +1,74 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import layoutStyles from '../layouts/Layout.module.css'; // Import layout styles for container
-import styles from './index.module.css';
+import Layout from "../layouts/Layout.astro";
+import layoutStyles from "../layouts/Layout.module.css"; // Import layout styles for container
+import styles from "./index.module.css";
 ---
 
 <Layout title="My Blog - Home">
-	<main>
-		<section class={styles.heroSection}>
-			<div class:list={[layoutStyles.container, layoutStyles.maxWidth4xl]}>
-				<h1 class={styles.heroTitle}>Welcome to My Blog</h1>
-				<p class={styles.heroSubtitle}>
-					Discover the latest insights, tutorials, and stories in technology.
-				</p>
-			</div>
-		</section>
+  <main>
+    <section class={styles.heroSection}>
+      <div class:list={[layoutStyles.container, layoutStyles.maxWidth4xl]}>
+        <h1 class={styles.heroTitle}>Welcome to My Blog</h1>
+        <p class={styles.heroSubtitle}>
+          Discover the latest insights, tutorials, and stories in technology.
+        </p>
+      </div>
+    </section>
 
-		<section class={styles.postsSection}>
-			<div class:list={[layoutStyles.container, layoutStyles.maxWidth4xl]}>
-				<h2 class={styles.postsTitle}>Latest Posts</h2>
+    <section class={styles.postsSection}>
+      <div class:list={[layoutStyles.container, layoutStyles.maxWidth4xl]}>
+        <h2 class={styles.postsTitle}>Latest Posts</h2>
 
-				<div class={styles.postsGrid}>
-					<article class={styles.postCard}>
-						<div class={styles.postCardContent}>
-							<h3 class={styles.postCardTitle}>
-								<a href="/posts/post1" class={styles.postLink}>Post Title 1</a>
-							</h3>
-							<p class={styles.postCardExcerpt}>A brief introduction to the topic of post 0.</p>
-							<div class={styles.postCardReadMoreWrapper}>
-								<a href="/posts/post1" class={styles.postCardReadMoreLink}>
-									Read more →
-								</a>
-							</div>
-						</div>
-					</article>
+        <div class={styles.postsGrid}>
+          <article class={styles.postCard}>
+            <div class={styles.postCardContent}>
+              <h3 class={styles.postCardTitle}>
+                <a href="/posts/post1" class={styles.postLink}>Post Title 1</a>
+              </h3>
+              <p class={styles.postCardExcerpt}>
+                A brief introduction to the topic of post 0.
+              </p>
+              <div class={styles.postCardReadMoreWrapper}>
+                <a href="/posts/post1" class={styles.postCardReadMoreLink}>
+                  Read more →
+                </a>
+              </div>
+            </div>
+          </article>
 
-					<article class={styles.postCard}>
-						<div class={styles.postCardContent}>
-							<h3 class={styles.postCardTitle}>
-								<a href="/posts/post2" class={styles.postLink}>Post Title 2</a>
-							</h3>
-							<p class={styles.postCardExcerpt}>A brief introduction to the topic of post 1.</p>
-							<div class={styles.postCardReadMoreWrapper}>
-								<a href="/posts/post2" class={styles.postCardReadMoreLink}>
-									Read more →
-								</a>
-							</div>
-						</div>
-					</article>
+          <article class={styles.postCard}>
+            <div class={styles.postCardContent}>
+              <h3 class={styles.postCardTitle}>
+                <a href="/posts/post2" class={styles.postLink}>Post Title 2</a>
+              </h3>
+              <p class={styles.postCardExcerpt}>
+                A brief introduction to the topic of post 1.
+              </p>
+              <div class={styles.postCardReadMoreWrapper}>
+                <a href="/posts/post2" class={styles.postCardReadMoreLink}>
+                  Read more →
+                </a>
+              </div>
+            </div>
+          </article>
 
-					<article class={styles.postCard}>
-						<div class={styles.postCardContent}>
-							<h3 class={styles.postCardTitle}>
-								<a href="/posts/post3" class={styles.postLink}>Post Title 3</a>
-							</h3>
-							<p class={styles.postCardExcerpt}>A brief introduction to the topic of post 2.</p>
-							<div class={styles.postCardReadMoreWrapper}>
-								<a href="/posts/post3" class={styles.postCardReadMoreLink}>
-									Read more →
-								</a>
-							</div>
-						</div>
-					</article>
-				</div>
-			</div>
-		</section>
-	</main>
+          <article class={styles.postCard}>
+            <div class={styles.postCardContent}>
+              <h3 class={styles.postCardTitle}>
+                <a href="/posts/post3" class={styles.postLink}>Post Title 3</a>
+              </h3>
+              <p class={styles.postCardExcerpt}>
+                A brief introduction to the topic of post 2.
+              </p>
+              <div class={styles.postCardReadMoreWrapper}>
+                <a href="/posts/post3" class={styles.postCardReadMoreLink}>
+                  Read more →
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>

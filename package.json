@@ -14,6 +14,8 @@
     "rollup-plugin-copy": "^3.5.0"
   },
   "devDependencies": {
+    "prettier": "3.5.3",
+    "prettier-plugin-astro": "0.14.1",
     "rimraf": "^6.0.1"
   }
 }

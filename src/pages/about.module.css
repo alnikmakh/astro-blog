@@ -37,9 +37,10 @@
 }
 
 .link {
-  color: #2563EB; /* text-blue-600 */
+  color: #2563eb; /* text-blue-600 */
 }
 
 .link:hover {
   text-decoration: underline; /* hover:underline */
-} 
+}
+
