@@ -1,0 +1,37 @@
+---
+import styles from "../layouts/Layout.module.css";
+// Ensure sl-icon is imported, either globally in Layout.astro or specifically here if needed
+// import "@shoelace-style/shoelace/dist/components/icon/icon.js";
+---
+
+<header class={styles.header}>
+  <div
+    class:list={[
+      styles.container,
+      styles.maxWidth6xl,
+      styles.headerContainer,
+    ]}
+  >
+    <div class={styles.headerInner}>
+      <div>
+        <a href="/" class={styles.brandLink}>
+          <sl-icon
+            name="house-heart-fill"
+            style="font-size: 1.5rem; vertical-align: middle; margin-right: 0.5rem;"
+          ></sl-icon>
+          My Blog
+        </a>
+      </div>
+
+      <nav>
+        <ul class={styles.navList}>
+          <li>
+            <a href="/" class={styles.navLink}>Home</a>
+          </li>
+          <li><a href="/about" class={styles.navLink}>About</a></li>
+          {/* Add other links as needed */}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header> 

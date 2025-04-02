@@ -1,0 +1,66 @@
+---
+import styles from "../layouts/Layout.module.css";
+// Ensure sl-icon is imported, either globally in Layout.astro or specifically here if needed
+// import "@shoelace-style/shoelace/dist/components/icon/icon.js";
+---
+
+<footer class={styles.footer}>
+  <div class:list={[styles.container, styles.maxWidth6xl]}>
+    <div class={styles.footerGrid}>
+      <div>
+        <h3 class={styles.footerHeading}>My Blog</h3>
+        <p class={styles.footerText}>
+          Sharing insights and stories about technology, development, and
+          more.
+        </p>
+      </div>
+
+      <div>
+        <h3 class={styles.footerHeading}>Links</h3>
+        <ul class={styles.footerLinkList}>
+          <li><a href="/" class={styles.footerLink}>Home</a></li>
+          <li><a href="/about" class={styles.footerLink}>About</a></li>
+          {/* Add other links */}
+        </ul>
+      </div>
+
+      <div>
+        <h3 class={styles.footerHeading}>Connect</h3>
+        <ul class={styles.footerLinkList}>
+          {/* Update with actual links */}
+          <li>
+            <sl-icon
+              name="github"
+              style="vertical-align: middle; margin-right: 0.25rem;"
+            ></sl-icon><a
+              href="https://github.com/alnikmakh"
+              class={styles.footerLink}>GitHub</a
+            >
+          </li>
+          <li>
+            <sl-icon
+              name="linkedin"
+              style="vertical-align: middle; margin-right: 0.25rem;"
+            ></sl-icon><a
+              href="https://linkedin.com/in/alnikmakh"
+              class={styles.footerLink}>LinkedIn</a
+            >
+          </li>
+          <li>
+            <sl-icon
+              name="envelope-fill"
+              style="vertical-align: middle; margin-right: 0.25rem;"
+            ></sl-icon><a
+              href="mailto:regulardev.click@gmail.com"
+              class={styles.footerLink}>Email</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class={styles.footerCopyright}>
+      <p>&copy; {new Date().getFullYear()} My Blog. All rights reserved.</p>
+    </div>
+  </div>
+</footer> 

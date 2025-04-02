@@ -3,6 +3,9 @@ import styles from "./Layout.module.css";
 import "../styles/global.css"; // Keep global styles import
 import "@shoelace-style/shoelace/dist/themes/light.css";
 import "@shoelace-style/shoelace/dist/themes/dark.css";
+import Header from "../components/Header.astro"; // Import Header
+import Footer from "../components/Footer.astro"; // Import Footer
+
 // Props for the Layout component
 interface Props {
   title: string;
@@ -32,103 +35,14 @@ const {
     </script>
   </head>
   <body>
-    {/* Removed classes, handled by global.css */}
-    <header class={styles.header}>
-      <div
-        class:list={[
-          styles.container,
-          styles.maxWidth6xl,
-          styles.headerContainer,
-        ]}
-      >
-        <div class={styles.headerInner}>
-          <div>
-            <a href="/" class={styles.brandLink}>
-              <sl-icon
-                name="house-heart-fill"
-                style="font-size: 1.5rem; vertical-align: middle; margin-right: 0.5rem;"
-              ></sl-icon>
-              My Blog
-            </a>
-          </div>
-
-          <nav>
-            <ul class={styles.navList}>
-              <li>
-                <a href="/" class={styles.navLink}>Home</a>
-              </li>
-              {
-                /* Add other links like About or Contact if you recreate those pages */
-              }
-              {/* <li><a href="/about" class={styles.navLink}>About</a></li> */}
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+    <Header />
+    {/* Use Header component */}
 
     <main class={styles.mainContent}>
       <slot />
     </main>
 
-    <footer class={styles.footer}>
-      <div class:list={[styles.container, styles.maxWidth6xl]}>
-        <div class={styles.footerGrid}>
-          <div>
-            <h3 class={styles.footerHeading}>My Blog</h3>
-            <p class={styles.footerText}>
-              Sharing insights and stories about technology, development, and
-              more.
-            </p>
-          </div>
-
-          <div>
-            <h3 class={styles.footerHeading}>Links</h3>
-            <ul class={styles.footerLinkList}>
-              <li><a href="/" class={styles.footerLink}>Home</a></li>
-              {/* Add other links */}
-            </ul>
-          </div>
-
-          <div>
-            <h3 class={styles.footerHeading}>Connect</h3>
-            <ul class={styles.footerLinkList}>
-              {/* Update with actual links */}
-              <li>
-                <sl-icon
-                  name="github"
-                  style="vertical-align: middle; margin-right: 0.25rem;"
-                ></sl-icon><a
-                  href="https://github.com/yourusername"
-                  class={styles.footerLink}>GitHub</a
-                >
-              </li>
-              <li>
-                <sl-icon
-                  name="linkedin"
-                  style="vertical-align: middle; margin-right: 0.25rem;"
-                ></sl-icon><a
-                  href="https://linkedin.com/in/yourprofile"
-                  class={styles.footerLink}>LinkedIn</a
-                >
-              </li>
-              <li>
-                <sl-icon
-                  name="envelope-fill"
-                  style="vertical-align: middle; margin-right: 0.25rem;"
-                ></sl-icon><a
-                  href="mailto:your.email@example.com"
-                  class={styles.footerLink}>Email</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class={styles.footerCopyright}>
-          <p>&copy; {new Date().getFullYear()} My Blog. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+    <Footer />
+    {/* Use Footer component */}
   </body>
 </html>
