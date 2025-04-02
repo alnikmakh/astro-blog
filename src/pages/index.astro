@@ -2,73 +2,58 @@
 import Layout from "../layouts/Layout.astro";
 import layoutStyles from "../layouts/Layout.module.css"; // Import layout styles for container
 import styles from "./index.module.css";
+import PostCard from "../components/PostCard.astro"; // Import the new component
+
+// Placeholder data - replace with actual data fetching later
+const posts = [
+  {
+    slug: "post-1",
+    title: "My First Blog Post",
+    excerpt: "This is a short summary of the first post.",
+  },
+  {
+    slug: "post-2",
+    title: "Responsive Design Tips",
+    excerpt: "Learn how to make your layouts adapt.",
+  },
+  {
+    slug: "post-3",
+    title: "Introduction to Astro",
+    excerpt: "Why Astro is great for content sites.",
+  },
+  {
+    slug: "post-4",
+    title: "CSS Modules Explained",
+    excerpt: "Scoped CSS for your components.",
+  },
+];
+
+const pageTitle = "My Blog";
 ---
 
-<Layout title="My Blog - Home">
-  <main>
-    <section class={styles.heroSection}>
-      <div class:list={[layoutStyles.container, layoutStyles.maxWidth4xl]}>
-        <h1 class={styles.heroTitle}>Welcome to My Blog</h1>
-        <p class={styles.heroSubtitle}>
-          Discover the latest insights, tutorials, and stories in technology.
-        </p>
-      </div>
+<Layout title={pageTitle}>
+  <div
+    class:list={[
+      layoutStyles.container,
+      layoutStyles.maxWidth4xl,
+      styles.pageContainer,
+    ]}
+  >
+    <h1 class={styles.pageTitle}>{pageTitle}</h1>
+    <p class={styles.pageSubtitle}>
+      Welcome! Here are my latest thoughts and findings.
+    </p>
+
+    <section class={styles.postsGrid}>
+      {
+        posts.map((post) => (
+          <PostCard
+            slug={post.slug}
+            title={post.title}
+            excerpt={post.excerpt}
+          />
+        ))
+      }
     </section>
-
-    <section class={styles.postsSection}>
-      <div class:list={[layoutStyles.container, layoutStyles.maxWidth4xl]}>
-        <h2 class={styles.postsTitle}>Latest Posts</h2>
-
-        <div class={styles.postsGrid}>
-          <article class={styles.postCard}>
-            <div class={styles.postCardContent}>
-              <h3 class={styles.postCardTitle}>
-                <a href="/posts/post1" class={styles.postLink}>Post Title 1</a>
-              </h3>
-              <p class={styles.postCardExcerpt}>
-                A brief introduction to the topic of post 0.
-              </p>
-              <div class={styles.postCardReadMoreWrapper}>
-                <a href="/posts/post1" class={styles.postCardReadMoreLink}>
-                  Read more →
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class={styles.postCard}>
-            <div class={styles.postCardContent}>
-              <h3 class={styles.postCardTitle}>
-                <a href="/posts/post2" class={styles.postLink}>Post Title 2</a>
-              </h3>
-              <p class={styles.postCardExcerpt}>
-                A brief introduction to the topic of post 1.
-              </p>
-              <div class={styles.postCardReadMoreWrapper}>
-                <a href="/posts/post2" class={styles.postCardReadMoreLink}>
-                  Read more →
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class={styles.postCard}>
-            <div class={styles.postCardContent}>
-              <h3 class={styles.postCardTitle}>
-                <a href="/posts/post3" class={styles.postLink}>Post Title 3</a>
-              </h3>
-              <p class={styles.postCardExcerpt}>
-                A brief introduction to the topic of post 2.
-              </p>
-              <div class={styles.postCardReadMoreWrapper}>
-                <a href="/posts/post3" class={styles.postCardReadMoreLink}>
-                  Read more →
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
+  </div>
 </Layout>

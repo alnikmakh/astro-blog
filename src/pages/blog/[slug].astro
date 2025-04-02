@@ -1,0 +1,72 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import layoutStyles from "../../layouts/Layout.module.css";
+import styles from "./post.module.css";
+import BlogPostContent from "../../components/BlogPostContent.astro";
+
+// Placeholder function to simulate fetching post data
+// Replace this with actual data fetching (e.g., from Markdown files or an API)
+async function getPostData(slug: string) {
+  // In a real app, you'd fetch content based on the slug
+  const posts = {
+    "post-1": {
+      title: "My First Blog Post",
+      content:
+        "<p>This is the full content of the first post. It can include <strong>HTML</strong> tags.</p><p>More content here...</p>",
+    },
+    "post-2": {
+      title: "Responsive Design Tips",
+      content:
+        "<p>Content about responsive design goes here.</p><ul><li>Use media queries</li><li>Test on different devices</li></ul>",
+    },
+    "post-3": {
+      title: "Introduction to Astro",
+      content:
+        "<p>Astro helps build fast websites. Learn more about its features.</p>",
+    },
+    "post-4": {
+      title: "CSS Modules Explained",
+      content:
+        "<p>Scoped CSS is easy with CSS Modules. Here's how it works.</p><pre><code>const hello = 'world';\nconsole.log(hello);</code></pre>",
+    },
+  };
+  // @ts-ignore
+  return posts[slug] || null;
+}
+
+// Define possible paths for Astro's static generation
+export async function getStaticPaths() {
+  // In a real app, get slugs from your data source
+  const slugs = ["post-1", "post-2", "post-3", "post-4"];
+  return slugs.map((slug) => ({
+    params: { slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const post = await getPostData(slug!);
+
+// Handle case where post is not found
+if (!post) {
+  return Astro.redirect("/404"); // Or return a 404 response
+}
+---
+
+<Layout title={post.title}>
+  <article
+    class:list={[
+      layoutStyles.container,
+      layoutStyles.maxWidth3xl,
+      styles.postContainer,
+    ]}
+  >
+    <h1 class={styles.postTitle}>{post.title}</h1>
+    <!-- Add post metadata like date here if available -->
+    <!-- <p class={styles.postDate}>Published on January 1, 2024</p> -->
+
+    <BlogPostContent content={post.content} />
+
+    <a href="/" class={styles.backLink}>&larr; Back to Blog</a>
+  </article>
+</Layout>
+

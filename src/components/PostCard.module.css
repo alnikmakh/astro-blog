@@ -1,0 +1,51 @@
+.postCard {
+  background-color: #ffffff; /* bg-white */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow:
+    0 1px 3px 0 rgb(0 0 0 / 0.1),
+    0 1px 2px -1px rgb(0 0 0 / 0.1); /* shadow */
+  overflow: hidden; /* overflow-hidden */
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.postCard:hover {
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1); /* hover:shadow-md */
+}
+
+.postCardContent {
+  padding: 1.5rem; /* p-6 */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Make cards in a row equal height */
+}
+
+.postCardTitle {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 0.5rem; /* mb-2 */
+  color: #111827; /* text-gray-900 */
+}
+
+.postLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.postLink:hover {
+  color: #2563eb; /* hover:text-blue-600 */
+}
+
+.postCardExcerpt {
+  color: #4b5563; /* text-gray-600 */
+  margin-bottom: 1rem; /* mb-4 */
+  flex-grow: 1; /* Pushes the read more link down */
+}
+
+.postCardReadMore {
+  display: inline-block;
+  color: #2563eb; /* text-blue-600 */
+  font-weight: 500; /* font-medium */
+  margin-top: auto; /* Aligns to bottom if card grows */
+}

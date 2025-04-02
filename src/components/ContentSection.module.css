@@ -1,0 +1,18 @@
+.contentSection {
+  margin-bottom: 2rem; /* mb-8 */
+}
+
+.sectionHeading {
+  font-size: 1.5rem; /* text-2xl */
+  line-height: 2rem;
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+/* Styles for paragraphs within the slot can be kept global or added here if specific */
+:global(.contentSection p) {
+  /* Example using :global if needed */
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  margin-bottom: 1rem; /* mb-4 */
+}

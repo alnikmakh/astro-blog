@@ -1,8 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import layoutStyles from "../layouts/Layout.module.css"; // Import layout styles for container
+import layoutStyles from "../layouts/Layout.module.css";
 import styles from "./about.module.css";
-
+import ContentSection from "../components/ContentSection.astro";
+import ContactLinks from "../components/ContactLinks.astro";
 const pageTitle = "About Me";
 ---
 
@@ -16,61 +17,36 @@ const pageTitle = "About Me";
   >
     <h1 class={styles.pageTitle}>{pageTitle}</h1>
 
-    <div class={styles.contentSection}>
-      <h2 class={styles.sectionHeading}>Hello, I'm Aleksandr!</h2>
-      <p class={styles.paragraph}>
+    <ContentSection title="Hello, I'm Aleksandr!">
+      <p>
         I'm a Frontend Developer based in Novi Sad, Serbia. This blog is where I
         share my thoughts about frontend development, along with occasional
         insights into my personal projects and interests.
       </p>
-      <p class={styles.paragraph}>
-        When I'm not working, you can find me coding.
-      </p>
-    </div>
+      <p>When I'm not working, you can find me coding.</p>
+    </ContentSection>
 
-    <div class={styles.contentSection}>
-      <h2 class={styles.sectionHeading}>My Background</h2>
-      <p class={styles.paragraph}>
+    <ContentSection title="My Background">
+      <p>
         I have 5 years of experience in Frontend Development. I've worked with
         TypeScript, React, Resux, NestJS, Fastify, Prisma. My focus is primarily
         on React and NestJS with Fastify.
       </p>
-    </div>
+    </ContentSection>
 
-    <div class={styles.contentSection}>
-      <h2 class={styles.sectionHeading}>Why I Blog</h2>
-      <p class={styles.paragraph}>
+    <ContentSection title="Why I Blog">
+      <p>
         I started this blog to share challenges that I face during my coding
         sessions. My goal is to just share my experience.
       </p>
-    </div>
+    </ContentSection>
 
-    <div class={styles.contentSection}>
-      <h2 class={styles.sectionHeading}>Example Shoelace Button</h2>
+    <ContentSection title="Example Shoelace Button">
       <sl-button variant="primary" outline>Say Hello</sl-button>
-    </div>
+    </ContentSection>
 
-    <div class={styles.contentSection}>
-      <h2 class={styles.sectionHeading}>Connect With Me</h2>
-      <ul class={styles.linkList}>
-        <li class={styles.listItem}>
-          <sl-icon name="envelope-fill" style="margin-right: 0.5em;"
-          ></sl-icon>Email: <a
-            href="mailto:regulardev.click@gmail.com"
-            class={styles.link}>regulardev.click@gmail.com</a>
-        </li>
-        <li class={styles.listItem}>
-          <sl-icon name="github" style="margin-right: 0.5em;"></sl-icon>GitHub: <a
-            href="https://github.com/alnikmakh"
-            class={styles.link}>@alnikmakh</a>
-        </li>
-        <li class={styles.listItem}>
-          <sl-icon name="linkedin" style="margin-right: 0.5em;"
-          ></sl-icon>LinkedIn: <a
-            href="https://linkedin.com/in/alnikmakh"
-            class={styles.link}>Aleksandr Makhorin</a>
-        </li>
-      </ul>
-    </div>
+    <ContentSection title="Connect With Me">
+      <ContactLinks />
+    </ContentSection>
   </main>
 </Layout>

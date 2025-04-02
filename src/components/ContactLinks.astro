@@ -1,0 +1,27 @@
+---
+import styles from "./ContactLinks.module.css";
+// Ensure Shoelace icons used here are imported in Layout or globally
+// import "@shoelace-style/shoelace/dist/components/icon/icon.js";
+---
+
+<ul class={styles.linkList}>
+  <li class={styles.listItem}>
+    <sl-icon name="envelope-fill" style="margin-right: 0.5em;"></sl-icon>Email: <a
+      href="mailto:regulardev.click@gmail.com"
+      class={styles.link}>regulardev.click@gmail.com</a
+    >
+  </li>
+  <li class={styles.listItem}>
+    <sl-icon name="github" style="margin-right: 0.5em;"></sl-icon>GitHub: <a
+      href="https://github.com/alnikmakh"
+      class={styles.link}>@alnikmakh</a
+    >
+  </li>
+  <li class={styles.listItem}>
+    <sl-icon name="linkedin" style="margin-right: 0.5em;"></sl-icon>LinkedIn: <a
+      href="https://linkedin.com/in/alnikmakh"
+      class={styles.link}>Aleksandr Makhorin</a
+    >
+  </li>
+</ul>
+

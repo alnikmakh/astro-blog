@@ -1,0 +1,41 @@
+.postContainer {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.postTitle {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 1.5rem; /* mb-6 */
+  line-height: 1.2;
+  color: #1f2937; /* text-gray-800 */
+}
+
+/* Example for post metadata */
+.postDate {
+  color: #6b7280; /* text-gray-500 */
+  margin-bottom: 2rem; /* mb-8 */
+  font-size: 0.875rem; /* text-sm */
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 2.5rem; /* mt-10 */
+  color: #2563eb; /* text-blue-600 */
+  font-weight: 500; /* font-medium */
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .postTitle {
+    font-size: 2.75rem; /* md:text-5xl */
+  }
+  .postContainer {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+}

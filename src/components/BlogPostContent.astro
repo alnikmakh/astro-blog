@@ -1,0 +1,12 @@
+---
+import styles from "./BlogPostContent.module.css";
+
+interface Props {
+  content: string; // HTML content string
+}
+
+const { content } = Astro.props;
+---
+
+<div class={styles.postContent} set:html={content} />
+

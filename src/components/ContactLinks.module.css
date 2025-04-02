@@ -1,0 +1,21 @@
+.linkList {
+  list-style: none; /* Changed from disc for cleaner look with icons */
+  padding-left: 0; /* Remove default padding */
+}
+
+.listItem {
+  margin-bottom: 0.75rem; /* Increased spacing slightly */
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  display: flex; /* Align icon and text nicely */
+  align-items: center;
+}
+
+.link {
+  color: #2563eb; /* text-blue-600 */
+  margin-left: 0.25em; /* Add space after colon */
+}
+
+.link:hover {
+  text-decoration: underline; /* hover:underline */
+}

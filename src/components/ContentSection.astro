@@ -1,0 +1,16 @@
+---
+import styles from "./ContentSection.module.css";
+
+interface Props {
+  title?: string; // Title is optional
+}
+
+const { title } = Astro.props;
+---
+
+<div class={styles.contentSection}>
+  {title && <h2 class={styles.sectionHeading}>{title}</h2>}
+  <slot />
+  <!-- Content goes here -->
+</div>
+
