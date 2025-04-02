@@ -1,0 +1,386 @@
+:root,
+:host,
+.sl-theme-light {
+  color-scheme: light;
+
+  /* Neutral (Grays) - Light version inspired by Tokio Night */
+  --sl-color-gray-50: hsl(231, 30%, 97%); /* Main background (#f5f6fa) */
+  --sl-color-gray-100: hsl(231, 25%, 94%);
+  --sl-color-gray-200: hsl(231, 20%, 92%); /* UI background elements (#e8e9f0) */
+  --sl-color-gray-300: hsl(230, 18%, 85%);
+  --sl-color-gray-400: hsl(230, 16%, 70%);
+  --sl-color-gray-500: hsl(230, 15%, 55%); /* Muted foreground/borders (#818499) */
+  --sl-color-gray-600: hsl(230, 15%, 45%);
+  --sl-color-gray-700: hsl(231, 15%, 35%);
+  --sl-color-gray-800: hsl(231, 15%, 25%); /* Main foreground text (#3a3c4c) */
+  --sl-color-gray-900: hsl(231, 15%, 18%); /* Darker text/elements (#282a36) */
+  --sl-color-gray-950: hsl(231, 15%, 12%); /* Near black (#1a1b26) */
+
+  /* Red - Light version */
+  --sl-color-red-50: hsl(350, 85%, 97%);
+  --sl-color-red-100: hsl(350, 85%, 94%);
+  --sl-color-red-200: hsl(350, 80%, 88%);
+  --sl-color-red-300: hsl(350, 78%, 78%);
+  --sl-color-red-400: hsl(350, 76%, 68%);
+  --sl-color-red-500: hsl(350, 75%, 60%); /* Base: #e95d72 */
+  --sl-color-red-600: hsl(350, 65%, 53%);
+  --sl-color-red-700: hsl(350, 60%, 45%);
+  --sl-color-red-800: hsl(350, 55%, 38%);
+  --sl-color-red-900: hsl(350, 50%, 30%);
+  --sl-color-red-950: hsl(350, 45%, 22%);
+
+  /* Orange - Light version */
+  --sl-color-orange-50: hsl(21, 100%, 96%);
+  --sl-color-orange-100: hsl(21, 100%, 92%);
+  --sl-color-orange-200: hsl(21, 98%, 85%);
+  --sl-color-orange-300: hsl(21, 96%, 75%);
+  --sl-color-orange-400: hsl(21, 95%, 68%);
+  --sl-color-orange-500: hsl(21, 95%, 60%); /* Base: #f78040 */
+  --sl-color-orange-600: hsl(21, 85%, 53%);
+  --sl-color-orange-700: hsl(21, 75%, 46%);
+  --sl-color-orange-800: hsl(21, 65%, 39%);
+  --sl-color-orange-900: hsl(21, 55%, 32%);
+  --sl-color-orange-950: hsl(21, 50%, 24%);
+
+  /* Yellow - Light version */
+  --sl-color-yellow-50: hsl(39, 90%, 95%);
+  --sl-color-yellow-100: hsl(39, 90%, 90%);
+  --sl-color-yellow-200: hsl(39, 85%, 80%);
+  --sl-color-yellow-300: hsl(39, 82%, 70%);
+  --sl-color-yellow-400: hsl(39, 80%, 62%);
+  --sl-color-yellow-500: hsl(39, 80%, 55%); /* Base: #d4a14f */
+  --sl-color-yellow-600: hsl(39, 70%, 48%);
+  --sl-color-yellow-700: hsl(39, 60%, 40%);
+  --sl-color-yellow-800: hsl(39, 50%, 33%);
+  --sl-color-yellow-900: hsl(39, 45%, 26%);
+  --sl-color-yellow-950: hsl(39, 40%, 19%);
+
+  /* Green - Light version */
+  --sl-color-green-50: hsl(99, 60%, 96%);
+  --sl-color-green-100: hsl(99, 60%, 92%);
+  --sl-color-green-200: hsl(99, 55%, 84%);
+  --sl-color-green-300: hsl(99, 50%, 74%);
+  --sl-color-green-400: hsl(99, 48%, 64%);
+  --sl-color-green-500: hsl(99, 45%, 55%); /* Adjusted base */
+  --sl-color-green-600: hsl(99, 40%, 48%); /* Base: #78b35e */
+  --sl-color-green-700: hsl(99, 35%, 40%);
+  --sl-color-green-800: hsl(99, 30%, 32%);
+  --sl-color-green-900: hsl(99, 28%, 25%);
+  --sl-color-green-950: hsl(99, 25%, 18%);
+
+  /* Cyan - Light version */
+  --sl-color-cyan-50: hsl(199, 95%, 96%);
+  --sl-color-cyan-100: hsl(199, 95%, 92%);
+  --sl-color-cyan-200: hsl(199, 90%, 85%);
+  --sl-color-cyan-300: hsl(199, 88%, 75%);
+  --sl-color-cyan-400: hsl(199, 86%, 65%);
+  --sl-color-cyan-500: hsl(199, 85%, 55%); /* Base: #4aa9e0 */
+  --sl-color-cyan-600: hsl(199, 75%, 48%);
+  --sl-color-cyan-700: hsl(199, 65%, 40%);
+  --sl-color-cyan-800: hsl(199, 55%, 33%);
+  --sl-color-cyan-900: hsl(199, 50%, 26%);
+  --sl-color-cyan-950: hsl(199, 45%, 19%);
+
+  /* Blue - Light version */
+  --sl-color-blue-50: hsl(220, 90%, 97%);
+  --sl-color-blue-100: hsl(220, 90%, 94%);
+  --sl-color-blue-200: hsl(220, 85%, 88%);
+  --sl-color-blue-300: hsl(220, 82%, 80%);
+  --sl-color-blue-400: hsl(220, 80%, 70%);
+  --sl-color-blue-500: hsl(220, 80%, 60%); /* Base: #5680e0 */
+  --sl-color-blue-600: hsl(220, 70%, 53%);
+  --sl-color-blue-700: hsl(220, 60%, 46%);
+  --sl-color-blue-800: hsl(220, 50%, 39%);
+  --sl-color-blue-900: hsl(220, 45%, 32%);
+  --sl-color-blue-950: hsl(220, 40%, 24%);
+
+  /* Violet/Magenta - Light version */
+  --sl-color-violet-50: hsl(267, 85%, 97%);
+  --sl-color-violet-100: hsl(267, 85%, 95%);
+  --sl-color-violet-200: hsl(267, 80%, 90%);
+  --sl-color-violet-300: hsl(267, 75%, 82%);
+  --sl-color-violet-400: hsl(267, 72%, 74%);
+  --sl-color-violet-500: hsl(267, 70%, 65%); /* Base: #a370e4 */
+  --sl-color-violet-600: hsl(267, 60%, 58%);
+  --sl-color-violet-700: hsl(267, 50%, 50%);
+  --sl-color-violet-800: hsl(267, 45%, 42%);
+  --sl-color-violet-900: hsl(267, 40%, 35%);
+  --sl-color-violet-950: hsl(267, 35%, 25%);
+
+  /* Semantic Aliases */
+  --sl-color-primary-50: var(--sl-color-blue-50);
+  --sl-color-primary-100: var(--sl-color-blue-100);
+  --sl-color-primary-200: var(--sl-color-blue-200);
+  --sl-color-primary-300: var(--sl-color-blue-300);
+  --sl-color-primary-400: var(--sl-color-blue-400);
+  --sl-color-primary-500: var(--sl-color-blue-500);
+  --sl-color-primary-600: var(--sl-color-blue-600);
+  --sl-color-primary-700: var(--sl-color-blue-700);
+  --sl-color-primary-800: var(--sl-color-blue-800);
+  --sl-color-primary-900: var(--sl-color-blue-900);
+  --sl-color-primary-950: var(--sl-color-blue-950);
+
+  --sl-color-success-50: var(--sl-color-green-50);
+  --sl-color-success-100: var(--sl-color-green-100);
+  --sl-color-success-200: var(--sl-color-green-200);
+  --sl-color-success-300: var(--sl-color-green-300);
+  --sl-color-success-400: var(--sl-color-green-400);
+  --sl-color-success-500: var(--sl-color-green-500);
+  --sl-color-success-600: var(--sl-color-green-600);
+  --sl-color-success-700: var(--sl-color-green-700);
+  --sl-color-success-800: var(--sl-color-green-800);
+  --sl-color-success-900: var(--sl-color-green-900);
+  --sl-color-success-950: var(--sl-color-green-950);
+
+  --sl-color-warning-50: var(--sl-color-yellow-50); /* Using Yellow for Warning */
+  --sl-color-warning-100: var(--sl-color-yellow-100);
+  --sl-color-warning-200: var(--sl-color-yellow-200);
+  --sl-color-warning-300: var(--sl-color-yellow-300);
+  --sl-color-warning-400: var(--sl-color-yellow-400);
+  --sl-color-warning-500: var(--sl-color-yellow-500);
+  --sl-color-warning-600: var(--sl-color-yellow-600);
+  --sl-color-warning-700: var(--sl-color-yellow-700);
+  --sl-color-warning-800: var(--sl-color-yellow-800);
+  --sl-color-warning-900: var(--sl-color-yellow-900);
+  --sl-color-warning-950: var(--sl-color-yellow-950);
+
+  --sl-color-danger-50: var(--sl-color-red-50);
+  --sl-color-danger-100: var(--sl-color-red-100);
+  --sl-color-danger-200: var(--sl-color-red-200);
+  --sl-color-danger-300: var(--sl-color-red-300);
+  --sl-color-danger-400: var(--sl-color-red-400);
+  --sl-color-danger-500: var(--sl-color-red-500);
+  --sl-color-danger-600: var(--sl-color-red-600);
+  --sl-color-danger-700: var(--sl-color-red-700);
+  --sl-color-danger-800: var(--sl-color-red-800);
+  --sl-color-danger-900: var(--sl-color-red-900);
+  --sl-color-danger-950: var(--sl-color-red-950);
+
+  --sl-color-neutral-50: var(--sl-color-gray-50);
+  --sl-color-neutral-100: var(--sl-color-gray-100);
+  --sl-color-neutral-200: var(--sl-color-gray-200);
+  --sl-color-neutral-300: var(--sl-color-gray-300);
+  --sl-color-neutral-400: var(--sl-color-gray-400);
+  --sl-color-neutral-500: var(--sl-color-gray-500);
+  --sl-color-neutral-600: var(--sl-color-gray-600);
+  --sl-color-neutral-700: var(--sl-color-gray-700);
+  --sl-color-neutral-800: var(--sl-color-gray-800);
+  --sl-color-neutral-900: var(--sl-color-gray-900);
+  --sl-color-neutral-950: var(--sl-color-gray-950);
+
+  /* Base Neutral Colors */
+  --sl-color-neutral-0: var(--sl-color-gray-50); /* Light background */
+  --sl-color-neutral-1000: var(--sl-color-gray-950); /* Dark foreground */
+
+  /* Border Radii (Unchanged) */
+  --sl-border-radius-small: 0.1875rem;
+  --sl-border-radius-medium: 0.25rem;
+  --sl-border-radius-large: 0.5rem;
+  --sl-border-radius-x-large: 1rem;
+  --sl-border-radius-circle: 50%;
+  --sl-border-radius-pill: 9999px;
+
+  /* Shadows (Adjusted for Light Theme) */
+  --sl-shadow-x-small: 0 1px 2px hsl(230 15% 55% / 6%);
+  --sl-shadow-small: 0 1px 2px hsl(230 15% 55% / 12%);
+  --sl-shadow-medium: 0 2px 4px hsl(230 15% 55% / 12%);
+  --sl-shadow-large: 0 2px 8px hsl(230 15% 55% / 12%);
+  --sl-shadow-x-large: 0 4px 16px hsl(230 15% 55% / 12%);
+
+  /* Spacing (Unchanged) */
+  --sl-spacing-3x-small: 0.125rem;
+  --sl-spacing-2x-small: 0.25rem;
+  --sl-spacing-x-small: 0.5rem;
+  --sl-spacing-small: 0.75rem;
+  --sl-spacing-medium: 1rem;
+  --sl-spacing-large: 1.25rem;
+  --sl-spacing-x-large: 1.75rem;
+  --sl-spacing-2x-large: 2.25rem;
+  --sl-spacing-3x-large: 3rem;
+  --sl-spacing-4x-large: 4.5rem;
+
+  /* Transitions (Unchanged) */
+  --sl-transition-x-slow: 1000ms;
+  --sl-transition-slow: 500ms;
+  --sl-transition-medium: 250ms;
+  --sl-transition-fast: 150ms;
+  --sl-transition-x-fast: 50ms;
+
+  /* Fonts (Unchanged) */
+  --sl-font-mono: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  --sl-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --sl-font-serif: Georgia, "Times New Roman", serif;
+  --sl-font-size-2x-small: 0.625rem;
+  --sl-font-size-x-small: 0.75rem;
+  --sl-font-size-small: 0.875rem;
+  --sl-font-size-medium: 1rem;
+  --sl-font-size-large: 1.25rem;
+  --sl-font-size-x-large: 1.5rem;
+  --sl-font-size-2x-large: 2.25rem;
+  --sl-font-size-3x-large: 3rem;
+  --sl-font-size-4x-large: 4.5rem;
+  --sl-font-weight-light: 300;
+  --sl-font-weight-normal: 400;
+  --sl-font-weight-semibold: 500;
+  --sl-font-weight-bold: 700;
+  --sl-letter-spacing-denser: -0.03em;
+  --sl-letter-spacing-dense: -0.015em;
+  --sl-letter-spacing-normal: normal;
+  --sl-letter-spacing-loose: 0.075em;
+  --sl-letter-spacing-looser: 0.15em;
+  --sl-line-height-denser: 1;
+  --sl-line-height-dense: 1.4;
+  --sl-line-height-normal: 1.8;
+  --sl-line-height-loose: 2.2;
+  --sl-line-height-looser: 2.6;
+
+  /* Focus Ring (Adjusted for Light Theme) */
+  --sl-focus-ring-color: var(--sl-color-primary-600);
+  --sl-focus-ring-style: solid;
+  --sl-focus-ring-width: 3px;
+  --sl-focus-ring: var(--sl-focus-ring-style) var(--sl-focus-ring-width)
+    var(--sl-focus-ring-color);
+  --sl-focus-ring-offset: 1px;
+
+  /* Button Font Sizes (Unchanged) */
+  --sl-button-font-size-small: var(--sl-font-size-x-small);
+  --sl-button-font-size-medium: var(--sl-font-size-small);
+  --sl-button-font-size-large: var(--sl-font-size-medium);
+
+  /* Input Sizes (Unchanged) */
+  --sl-input-height-small: 1.875rem;
+  --sl-input-height-medium: 2.5rem;
+  --sl-input-height-large: 3.125rem;
+
+  /* Input Styles (Adjusted for Light Theme) */
+  --sl-input-background-color: var(--sl-color-neutral-0);
+  --sl-input-background-color-hover: var(--sl-input-background-color);
+  --sl-input-background-color-focus: var(--sl-input-background-color);
+  --sl-input-background-color-disabled: var(--sl-color-neutral-100);
+  --sl-input-border-color: var(--sl-color-neutral-400); /* Darker border */
+  --sl-input-border-color-hover: var(--sl-color-neutral-500);
+  --sl-input-border-color-focus: var(--sl-color-primary-500);
+  --sl-input-border-color-disabled: var(--sl-color-neutral-300);
+  --sl-input-border-width: 1px;
+  --sl-input-required-content: "*";
+  --sl-input-required-content-offset: -2px;
+  --sl-input-required-content-color: var(--sl-input-label-color);
+
+  --sl-input-border-radius-small: var(--sl-border-radius-medium);
+  --sl-input-border-radius-medium: var(--sl-border-radius-medium);
+  --sl-input-border-radius-large: var(--sl-border-radius-medium);
+
+  --sl-input-font-family: var(--sl-font-sans);
+  --sl-input-font-weight: var(--sl-font-weight-normal);
+  --sl-input-font-size-small: var(--sl-font-size-small);
+  --sl-input-font-size-medium: var(--sl-font-size-medium);
+  --sl-input-font-size-large: var(--sl-font-size-large);
+  --sl-input-letter-spacing: var(--sl-letter-spacing-normal);
+
+  --sl-input-color: var(--sl-color-neutral-800);
+  --sl-input-color-hover: var(--sl-color-neutral-800);
+  --sl-input-color-focus: var(--sl-color-neutral-800);
+  --sl-input-color-disabled: var(--sl-color-neutral-700);
+  --sl-input-icon-color: var(--sl-color-neutral-500);
+  --sl-input-icon-color-hover: var(--sl-color-neutral-600);
+  --sl-input-icon-color-focus: var(--sl-color-neutral-600);
+  --sl-input-placeholder-color: var(--sl-color-neutral-500);
+  --sl-input-placeholder-color-disabled: var(--sl-color-neutral-600);
+  --sl-input-spacing-small: var(--sl-spacing-small);
+  --sl-input-spacing-medium: var(--sl-spacing-medium);
+  --sl-input-spacing-large: var(--sl-spacing-large);
+
+  --sl-input-focus-ring-color: hsl(220, 80%, 60%, 0.4); /* Primary 500 with alpha */
+  --sl-input-focus-ring-offset: 0;
+
+  /* Filled Input Styles (Adjusted for Light Theme) */
+  --sl-input-filled-background-color: var(--sl-color-neutral-100);
+  --sl-input-filled-background-color-hover: var(--sl-color-neutral-100);
+  --sl-input-filled-background-color-focus: var(--sl-color-neutral-100);
+  --sl-input-filled-background-color-disabled: var(--sl-color-neutral-100);
+  --sl-input-filled-color: var(--sl-color-neutral-800);
+  --sl-input-filled-color-hover: var(--sl-color-neutral-800);
+  --sl-input-filled-color-focus: var(--sl-color-neutral-700);
+  --sl-input-filled-color-disabled: var(--sl-color-neutral-800);
+
+  /* Input Label Styles (Adjusted for Light Theme) */
+  --sl-input-label-font-size-small: var(--sl-font-size-small);
+  --sl-input-label-font-size-medium: var(--sl-font-size-medium);
+  --sl-input-label-font-size-large: var(--sl-font-size-large);
+  --sl-input-label-color: var(--sl-color-neutral-800);
+
+  /* Input Help Text Styles (Adjusted for Light Theme) */
+  --sl-input-help-text-font-size-small: var(--sl-font-size-x-small);
+  --sl-input-help-text-font-size-medium: var(--sl-font-size-small);
+  --sl-input-help-text-font-size-large: var(--sl-font-size-medium);
+  --sl-input-help-text-color: var(--sl-color-neutral-500);
+
+  /* Toggle Sizes (Unchanged) */
+  --sl-toggle-size-small: 0.875rem;
+  --sl-toggle-size-medium: 1.125rem;
+  --sl-toggle-size-large: 1.375rem;
+
+  /* Overlay (Adjusted for Light Theme) */
+  --sl-overlay-background-color: hsl(230 15% 25% / 33%);
+
+  /* Panel (Adjusted for Light Theme) */
+  --sl-panel-background-color: var(--sl-color-neutral-0);
+  --sl-panel-border-color: var(--sl-color-neutral-200);
+  --sl-panel-border-width: 1px;
+
+  /* Tooltip (Adjusted for Light Theme) */
+  --sl-tooltip-border-radius: var(--sl-border-radius-medium);
+  --sl-tooltip-background-color: var(--sl-color-neutral-800);
+  --sl-tooltip-color: var(--sl-color-neutral-100);
+  --sl-tooltip-font-family: var(--sl-font-sans);
+  --sl-tooltip-font-weight: var(--sl-font-weight-normal);
+  --sl-tooltip-font-size: var(--sl-font-size-small);
+  --sl-tooltip-line-height: var(--sl-line-height-dense);
+  --sl-tooltip-padding: var(--sl-spacing-2x-small) var(--sl-spacing-x-small);
+  --sl-tooltip-arrow-size: 6px;
+
+  /* Z-Indexes (Unchanged) */
+  --sl-z-index-drawer: 700;
+  --sl-z-index-dialog: 800;
+  --sl-z-index-dropdown: 900;
+  --sl-z-index-toast: 950;
+  --sl-z-index-tooltip: 1000;
+}
+
+@supports (scrollbar-gutter: stable) {
+  .sl-scroll-lock {
+    scrollbar-gutter: var(--sl-scroll-lock-gutter) !important;
+  }
+
+  .sl-scroll-lock body {
+    overflow: hidden !important;
+  }
+}
+
+@supports not (scrollbar-gutter: stable) {
+  .sl-scroll-lock body {
+    padding-right: var(--sl-scroll-lock-size) !important;
+    overflow: hidden !important;
+  }
+}
+
+.sl-toast-stack {
+  position: fixed;
+  top: 0;
+  inset-inline-end: 0;
+  z-index: var(--sl-z-index-toast);
+  width: 28rem;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.sl-toast-stack sl-alert {
+  margin: var(--sl-spacing-medium);
+}
+
+.sl-toast-stack sl-alert::part(base) {
+  box-shadow: var(--sl-shadow-large);
+}

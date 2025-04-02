@@ -1,0 +1,188 @@
+---
+import Layout from "../layouts/Layout.astro";
+import layoutStyles from "../layouts/Layout.module.css";
+import ContentSection from "../components/ContentSection.astro";
+import styles from "./shoelace-demo.module.css"; // Create this file for custom styles if needed
+
+const pageTitle = "Shoelace Component Demo";
+---
+
+<Layout title={pageTitle}>
+  <script>
+    // Import Shoelace components used on this page
+    import "@shoelace-style/shoelace/dist/components/button/button.js";
+    import "@shoelace-style/shoelace/dist/components/input/input.js";
+    import "@shoelace-style/shoelace/dist/components/textarea/textarea.js";
+    import "@shoelace-style/shoelace/dist/components/checkbox/checkbox.js";
+    import "@shoelace-style/shoelace/dist/components/radio-group/radio-group.js";
+    import "@shoelace-style/shoelace/dist/components/radio/radio.js";
+    import "@shoelace-style/shoelace/dist/components/select/select.js";
+    import "@shoelace-style/shoelace/dist/components/option/option.js";
+    import "@shoelace-style/shoelace/dist/components/switch/switch.js";
+    import "@shoelace-style/shoelace/dist/components/card/card.js";
+    import "@shoelace-style/shoelace/dist/components/dialog/dialog.js";
+    import "@shoelace-style/shoelace/dist/components/drawer/drawer.js";
+    import "@shoelace-style/shoelace/dist/components/icon/icon.js";
+    import "@shoelace-style/shoelace/dist/components/alert/alert.js";
+    import "@shoelace-style/shoelace/dist/components/progress-bar/progress-bar.js";
+    import "@shoelace-style/shoelace/dist/components/spinner/spinner.js";
+    import "@shoelace-style/shoelace/dist/components/tab-group/tab-group.js";
+    import "@shoelace-style/shoelace/dist/components/tab/tab.js";
+    import "@shoelace-style/shoelace/dist/components/tab-panel/tab-panel.js";
+    import "@shoelace-style/shoelace/dist/components/details/details.js";
+    import "@shoelace-style/shoelace/dist/components/badge/badge.js";
+    import "@shoelace-style/shoelace/dist/components/avatar/avatar.js";
+    import "@shoelace-style/shoelace/dist/components/tooltip/tooltip.js";
+
+    // Dialog interaction
+    const dialog = document.getElementById("demo-dialog");
+    const openDialogButton = document.getElementById("open-dialog-btn");
+    const closeDialogButton = document.getElementById("close-dialog-btn");
+    openDialogButton?.addEventListener("click", () => dialog?.show());
+    closeDialogButton?.addEventListener("click", () => dialog?.hide());
+
+    // Drawer interaction
+    const drawer = document.getElementById("demo-drawer");
+    const openDrawerButton = document.getElementById("open-drawer-btn");
+    openDrawerButton?.addEventListener("click", () => drawer?.show());
+
+    // Alert interaction
+    const alert = document.getElementById("demo-alert");
+    const openAlertButton = document.getElementById("open-alert-btn");
+    openAlertButton?.addEventListener("click", () => alert?.toast());
+
+  </script>
+
+  <main class:list={[layoutStyles.container, layoutStyles.maxWidth4xl, styles.demoMain]}>
+    <h1 class={styles.pageTitle}>{pageTitle}</h1>
+
+    <ContentSection title="Buttons">
+      <div class={styles.componentGrid}>
+        <sl-button variant="primary">Primary</sl-button>
+        <sl-button variant="success">Success</sl-button>
+        <sl-button variant="neutral">Neutral</sl-button>
+        <sl-button variant="warning">Warning</sl-button>
+        <sl-button variant="danger">Danger</sl-button>
+        <sl-button variant="primary" outline>Outline</sl-button>
+        <sl-button variant="primary" pill>Pill</sl-button>
+        <sl-button variant="primary" circle>
+          <sl-icon name="gear"></sl-icon>
+        </sl-button>
+        <sl-button variant="primary" disabled>Disabled</sl-button>
+        <sl-button variant="primary" loading>Loading</sl-button>
+        <sl-button size="small">Small</sl-button>
+        <sl-button size="medium">Medium</sl-button>
+        <sl-button size="large">Large</sl-button>
+      </div>
+    </ContentSection>
+
+    <ContentSection title="Inputs & Forms">
+       <div class={styles.formGrid}>
+        <sl-input label="Name" placeholder="Enter your name" clearable></sl-input>
+        <sl-input type="password" label="Password" password-toggle></sl-input>
+        <sl-input type="email" label="Email" placeholder="you@example.com">
+          <sl-icon name="envelope" slot="prefix"></sl-icon>
+        </sl-input>
+        <sl-input type="number" label="Age" value="30"></sl-input>
+        <sl-textarea label="Bio" placeholder="Tell us about yourself" resize="auto"></sl-textarea>
+        <sl-select label="Favorite Fruit" placeholder="Select one" clearable>
+          <sl-option value="apple">Apple</sl-option>
+          <sl-option value="banana">Banana</sl-option>
+          <sl-option value="orange">Orange</sl-option>
+        </sl-select>
+        <sl-checkbox>Subscribe to newsletter</sl-checkbox>
+        <sl-radio-group label="Select an option" name="a" value="1">
+          <sl-radio value="1">Option 1</sl-radio>
+          <sl-radio value="2">Option 2</sl-radio>
+          <sl-radio value="3">Option 3</sl-radio>
+        </sl-radio-group>
+        <sl-switch>Enable Notifications</sl-switch>
+      </div>
+    </ContentSection>
+
+    <ContentSection title="Card">
+      <sl-card class="card-overview">
+        <img
+          slot="image"
+          src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+          alt="A kitten sits patiently between a terracotta pot and decorative grasses."
+        />
+        <strong>Mittens</strong><br />
+        This kitten is as cute as he is playful. Bring him home today!<br />
+        <small>6 weeks old</small>
+
+        <div slot="footer">
+          <sl-button variant="primary" pill>More Info</sl-button>
+          <sl-rating></sl-rating>
+        </div>
+      </sl-card>
+    </ContentSection>
+
+    <ContentSection title="Dialog & Drawer">
+       <div class={styles.componentGrid}>
+        <sl-button id="open-dialog-btn">Open Dialog</sl-button>
+        <sl-button id="open-drawer-btn">Open Drawer</sl-button>
+      </div>
+
+      <sl-dialog id="demo-dialog" label="Dialog Title">
+        This is the dialog content. You can put anything you want in here.
+        <sl-button slot="footer" variant="primary" id="close-dialog-btn">Close</sl-button>
+      </sl-dialog>
+
+      <sl-drawer id="demo-drawer" label="Drawer Title" placement="start">
+        This is the drawer content. You can put anything you want in here.
+        <sl-button slot="footer" variant="primary" onclick="document.getElementById('demo-drawer').hide()">Close</sl-button>
+      </sl-drawer>
+    </ContentSection>
+
+    <ContentSection title="Alerts & Indicators">
+       <div class={styles.componentGrid}>
+        <sl-button id="open-alert-btn">Show Toast Alert</sl-button>
+        <sl-spinner style="font-size: 2rem;"></sl-spinner>
+        <sl-badge variant="primary" pill>Primary</sl-badge>
+        <sl-badge variant="success" pill>Success</sl-badge>
+        <sl-badge variant="danger" pulse>Pulse</sl-badge>
+      </div>
+      <sl-alert id="demo-alert" variant="primary" closable duration="3000">
+        <sl-icon slot="icon" name="info-circle"></sl-icon>
+        <strong>This is a toast alert!</strong><br /> It will disappear automatically.
+      </sl-alert>
+      <sl-progress-bar value="50" class={styles.progressBar}></sl-progress-bar>
+    </ContentSection>
+
+     <ContentSection title="Tabs">
+        <sl-tab-group>
+          <sl-tab slot="nav" panel="general">General</sl-tab>
+          <sl-tab slot="nav" panel="custom">Custom</sl-tab>
+          <sl-tab slot="nav" panel="advanced">Advanced</sl-tab>
+          <sl-tab slot="nav" panel="disabled" disabled>Disabled</sl-tab>
+
+          <sl-tab-panel name="general">This is the general tab panel.</sl-tab-panel>
+          <sl-tab-panel name="custom">This is the custom tab panel.</sl-tab-panel>
+          <sl-tab-panel name="advanced">This is the advanced tab panel.</sl-tab-panel>
+          <sl-tab-panel name="disabled">This is a disabled tab panel.</sl-tab-panel>
+        </sl-tab-group>
+    </ContentSection>
+
+    <ContentSection title="Details & Avatar">
+        <sl-details summary="Toggle Me">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </sl-details>
+        <div class={styles.avatarGroup}>
+            <sl-avatar image="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" label="Avatar of a gray tabby kitten looking down"></sl-avatar>
+            <sl-avatar initials="SL" label="Avatar with initials: SL"></sl-avatar>
+            <sl-avatar shape="square">
+                <sl-icon name="image" label="Placeholder image"></sl-icon>
+            </sl-avatar>
+        </div>
+    </ContentSection>
+
+     <ContentSection title="Tooltip">
+        <sl-tooltip content="This is a tooltip!">
+            <sl-button>Hover Me</sl-button>
+        </sl-tooltip>
+     </ContentSection>
+
+  </main>
+</Layout> 
