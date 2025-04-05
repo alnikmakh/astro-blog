@@ -1,8 +1,7 @@
 ---
 import styles from "./Layout.module.css";
 import "../styles/global.css"; // Keep global styles import
-import "@shoelace-style/shoelace/dist/themes/light.css";
-import "@shoelace-style/shoelace/dist/themes/dark.css";
+import "../../tokio-night-dark.css";
 import Header from "../components/Header.astro"; // Import Header
 import Footer from "../components/Footer.astro"; // Import Footer
 
@@ -20,7 +19,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="sl-theme-tokio-night-dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

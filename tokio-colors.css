@@ -1,0 +1,74 @@
+/*Fonts*/
+:root {
+  --default-font: '"JetBrains Mono", monospace, "Inter", sans-serif';
+  --font-monospace: '"JetBrains Mono", monospace, "Source Code Pro", monospace';
+}
+
+.theme-dark {
+  color-scheme: dark;
+  /* --accent-h: 261; /* magenta */
+  /* --accent-s: 85%; */
+  /* --accent-l: 79%; */
+  /* cyan */
+  --accent-h: 202;
+  --accent-s: 100%;
+  --accent-l: 75%;
+
+  --bg_dark2: rgb(25,27,41);
+  --bg_dark: rgb(30,32,48);
+  --bg: rgb(34,36,54);
+  --bg_highlight: rgb(47,51,77);
+  --bg_highlight_dark: rgb(30,32,48);
+  --terminal_black: rgb(65, 72, 104);
+  --fg: rgb(192, 202, 245);
+  --fg_dark: rgb(169, 177, 214);
+  --comment: rgb(86, 95, 137);
+  --blue0: rgb(61, 89, 161);
+  --blue: rgb(130,170,255);
+  --cyan: rgb(134,225,252);
+  --magenta: rgb(192,153,255);
+  --pink: rgb(217, 0, 105);
+  --orange: rgb(255,150,108);
+  --yellow: rgb(255,199,119);
+  --green: rgb(195,232,141);
+  --teal: rgb(26, 188, 156);
+  --red: rgb(255, 117, 127);
+  --red1: rgb(197,59,83);
+  --unknown: #ffffff;
+
+  --text-normal: rgb(200,211,245);
+  --text-muted: rgb(130,139,184);
+  --text-faint: rgb(130,139,184);
+}
+
+.theme-light {
+  /* --accent-h: 261; /* magenta */
+  /* --accent-s: 24%; */
+  /* --accent-l: 38%; */
+  /* cyan */
+  --accent-h: 202;
+  --accent-s: 86%;
+  --accent-l: 43%;
+
+  --bg_dark2: rgb(188, 189, 194);
+  --bg_dark: rgb(203, 204, 209);
+  --bg: rgb(213, 214, 219);
+  --bg_highlight: rgb(220, 222, 226);
+  --bg_highlight_dark: rgb(195, 197, 201);
+  --terminal_black: rgb(15, 15, 20);
+  --fg: rgb(52, 59, 88);
+  --fg_dark: rgb(39, 46, 75);
+  --comment: rgb(150, 153, 163);
+  --blue0: rgb(39, 71, 125);
+  --blue: rgb(52, 84, 138);
+  --cyan: rgb(15, 75, 110);
+  --magenta: rgb(90, 74, 120);
+  --pink: rgb(109, 74, 120);
+  --orange: rgb(150, 80, 39);
+  --yellow: rgb(143, 94, 21);
+  --green: rgb(51, 99, 92);
+  --teal: rgb(22, 103, 117);
+  --red: rgb(140, 67, 81);
+  --red1: rgb(115, 42, 56);
+  --unknown: #000000;
+}
