@@ -1,6 +1,6 @@
-:root,
 :host,
 .sl-theme-tokio-night-dark {
+  color-scheme: dark;
   --sl-color-gray-50: rgb(194 200 245);
   --sl-color-gray-100: rgb(175 181 222);
   --sl-color-gray-200: rgb(156 162 200);
@@ -366,4 +366,3 @@
 .sl-toast-stack sl-alert::part(base) {
   box-shadow: var(--sl-shadow-large);
 }
-

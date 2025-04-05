@@ -1,7 +1,6 @@
 ---
 import styles from "./Layout.module.css";
 import "../styles/global.css"; // Keep global styles import
-import "../../tokio-night-dark.css";
 import Header from "../components/Header.astro"; // Import Header
 import Footer from "../components/Footer.astro"; // Import Footer
 
@@ -25,6 +24,7 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/tokio-night-dark.css" />
     <title>{title} | My Blog</title>
 
     <script>

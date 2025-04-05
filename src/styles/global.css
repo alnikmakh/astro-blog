@@ -18,7 +18,7 @@ body {
   background-color: #f9fafb; /* Equivalent to bg-gray-50 */
   display: flex;
   flex-direction: column;
-  color: #111827; /* Default text color */
+  color: var(--sl-color-neutral-50); /* Default text color */
 }
 
 img,
