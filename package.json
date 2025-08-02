@@ -10,8 +10,10 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@lit-labs/ssr": "^3.3.1",
     "@shoelace-style/shoelace": "^2.20.1",
     "astro": "^5.5.3",
+    "lit": "^3.2.1",
     "rollup-plugin-copy": "^3.5.0"
   },
   "devDependencies": {
